@@ -28,7 +28,20 @@ Module ProgramFlow
         ElseIf raccoon > 3 Then
             Console.WriteLine(raccoon > 3)
         ElseIf raccoon > 4 Then
-        Console.WriteLine(raccoon > 4)
+            Console.WriteLine(raccoon > 4)
+        End If
+
+
+        raccoon -= 3
+        'if no conditions are true, console will read else condition
+        If raccoon > 6 Then
+            Console.WriteLine($"{raccoon} is a big number!")
+        ElseIf raccoon > 3 Then
+            Console.WriteLine($"Sorry not tall enough...")
+        ElseIf raccoon > 4 Then
+            Console.WriteLine($"who cares")
+        Else
+            Console.WriteLine($"Not sure what happened")
         End If
 
 
