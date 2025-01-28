@@ -49,30 +49,46 @@ Module ProgramFlow
         'End If
 
 
-        Do
-            Console.WriteLine("Please enter your age:")
+        'Do 'sets beginning of loop
+        '    Console.WriteLine("Please enter your age:")
+        '    userInput = Console.ReadLine()
+        '    Try
+        '        myNumber = CInt(userInput)
+        '        Select Case myNumber
+        '            Case 0 To 3
+        '                Console.WriteLine("Where are your parents?")
+        '            Case 4 To 10
+        '                Console.WriteLine("Where are your parents?")
+        '            Case 11 To 64
+        '                Console.WriteLine("Enjoy the ride!")
+        '            Case 65 To 99
+        '                Console.WriteLine("Where are your kids?")
+        '            Case > 100
+        '                Console.WriteLine("Oh so you and Walt Disney went to school together?")
+        '            Case Else
+        '                Console.WriteLine("Well this is awkward")
+        '        End Select
+        '    Catch ex As Exception
+        '        Console.WriteLine($"You entered {userInput}")
+        '    End Try
+        'Loop Until userInput = "Q" 'pressing q ends the loop
+        'Console.WriteLine("Have a nice day")
+
+        'userInput = "5"
+
+        'Do
+        '    'Console.WriteLine("Type something and press enter:")
+        '    'userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do, Loop until: ")
+        '    userInput = "q"
+        'Loop Until userInput = "Q"
+
+        Do Until userInput = "Q"
+            Console.WriteLine("Type something and press enter:")
             userInput = Console.ReadLine()
-            Try
-                myNumber = CInt(userInput)
-                Select Case myNumber
-                    Case 0 To 3
-                        Console.WriteLine("Where are your parents?")
-                    Case 4 To 10
-                        Console.WriteLine("Where are your parents?")
-                    Case 11 To 64
-                        Console.WriteLine("Enjoy the ride!")
-                    Case 65 To 99
-                        Console.WriteLine("Where are your kids?")
-                    Case > 100
-                        Console.WriteLine("Oh so you and Walt Disney went to school together?")
-                    Case Else
-                        Console.WriteLine("Well this is awkward")
-                End Select
-            Catch ex As Exception
-                Console.WriteLine($"You entered {userInput}")
-            End Try
-        Loop Until userInput = "Q"
-        Console.WriteLine("Have a nice day")
+            Console.WriteLine($"In the Do Until, Loop: ")
+        Loop
+
     End Sub
 
 End Module
