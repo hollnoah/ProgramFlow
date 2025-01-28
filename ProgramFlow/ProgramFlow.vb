@@ -1,10 +1,13 @@
 ﻿Option Explicit On
 Option Strict On
+Option Compare Text
+Imports System.Runtime.InteropServices
 
 Module ProgramFlow
     Sub Main()
         Dim myNumber As Integer
         Dim userInput As String
+
 
         ''assign 5 to my number (raccoon)
         'myNumber = 5
@@ -45,25 +48,31 @@ Module ProgramFlow
         '    Console.WriteLine($"Not sure what happened")
         'End If
 
-        Console.WriteLine("Please enter your age:")
-        userInput Console.ReadLine()
-        myNumber = CInt(userInput)
 
-        Select Case myNumber
-            Case 0 To 3
-
-            Case 4 To 10
-
-            Case 11 To 64
-
-            Case 65 To 99
-
-            Case > 100
-
-            Case Else
-
-        End Select
-
+        Do
+            Console.WriteLine("Please enter your age:")
+            userInput = Console.ReadLine()
+            Try
+                myNumber = CInt(userInput)
+                Select Case myNumber
+                    Case 0 To 3
+                        Console.WriteLine("Where are your parents?")
+                    Case 4 To 10
+                        Console.WriteLine("Where are your parents?")
+                    Case 11 To 64
+                        Console.WriteLine("Enjoy the ride!")
+                    Case 65 To 99
+                        Console.WriteLine("Where are your kids?")
+                    Case > 100
+                        Console.WriteLine("Oh so you and Walt Disney went to school together?")
+                    Case Else
+                        Console.WriteLine("Well this is awkward")
+                End Select
+            Catch ex As Exception
+                Console.WriteLine($"You entered {userInput}")
+            End Try
+        Loop Until userInput = "Q"
+        Console.WriteLine("Have a nice day")
     End Sub
 
 End Module
