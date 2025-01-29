@@ -90,21 +90,38 @@ Module ProgramFlow
         'Loop
 
         'declares i as variable, starts at one, and increases by the step number
-        For i As Integer = 1 To 10 Step 1
-            Console.WriteLine(i)
-        Next
-        Console.WriteLine(StrDup(80, "*")) 'writes string duplication of asteriks, a certain number of times, 80
+        'For i As Integer = 1 To 10 Step 1
+        '    Console.WriteLine(i)
+        'Next
+        'Console.WriteLine(StrDup(80, "*")) 'writes string duplication of asteriks, a certain number of times, 80
 
-        For i = 1 To 10 Step 0.5
-            Console.WriteLine(i)
-        Next
-        Console.WriteLine(StrDup(80, "*"))
+        'For i = 1 To 10 Step 0.5
+        '    Console.WriteLine(i)
+        'Next
+        'Console.WriteLine(StrDup(80, "*"))
 
-        For i = 1 To 10 Step 0.5
-            Console.WriteLine(i)
-        Next
-        Console.WriteLine(StrDup(80, "*"))
+        'For i = 1 To 10 Step 0.5
+        '    Console.WriteLine(i)
+        'Next
+        'Console.WriteLine(StrDup(80, "*"))
 
+        'nested for loops
+        Dim result As String
+
+        For i = 1 To 10
+
+            For j = 1 To 10
+                'result = CStr(i + j)
+                result = (i + j).ToString("C")
+                result = result.PadLeft(10)
+                Console.Write(result)
+
+                'Console.Write(CStr(i + j).PadLeft(4) & " |")
+
+            Next
+
+            Console.WriteLine()
+        Next
     End Sub
 
 End Module
