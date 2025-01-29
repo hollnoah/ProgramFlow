@@ -83,11 +83,27 @@ Module ProgramFlow
         '    userInput = "q"
         'Loop Until userInput = "Q"
 
-        Do Until userInput = "Q"
-            Console.WriteLine("Type something and press enter:")
-            userInput = Console.ReadLine()
-            Console.WriteLine($"In the Do Until, Loop: ")
-        Loop
+        'Do Until userInput = "Q"
+        '    Console.WriteLine("Type something and press enter:")
+        '    userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do Until, Loop: ")
+        'Loop
+
+        'declares i as variable, starts at one, and increases by the step number
+        For i As Integer = 1 To 10 Step 1
+            Console.WriteLine(i)
+        Next
+        Console.WriteLine(StrDup(80, "*")) 'writes string duplication of asteriks, a certain number of times, 80
+
+        For i = 1 To 10 Step 0.5
+            Console.WriteLine(i)
+        Next
+        Console.WriteLine(StrDup(80, "*"))
+
+        For i = 1 To 10 Step 0.5
+            Console.WriteLine(i)
+        Next
+        Console.WriteLine(StrDup(80, "*"))
 
     End Sub
 
